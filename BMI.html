@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บการคำนวนค่า BMI</title>
+    <link rel="stylesheet" href="BMI.css">
+</head>
+<body>
+    <header>
+        <h1>เว็บการคำนวนค่าดัชนีมวลร่างกาย BMI</h1>
+        <p>ประเมินสุขภาพเบท้องต้นจากน้ำหนักเเละส่วนสูงของคุณ</p>
+    </header>
+
+    <main>
+        <div class="card">
+            <div class="input-group">
+                <label for="weight">น้ำหนักของคุณ (กิโลกรัม):</label>
+                <input type="number" id="weight" placeholder="เช่น 60">
+            </div>
+
+            <div class="input-group">
+                <label for="height">ส่วนสูงของคุณ (เซนติเมตร)</label>
+                <input type="number" id="height" placeholder="เช่น 170">
+            </div>
+
+            <button onclick="calculateBMI()">คำนวนค่า BMI</button>
+
+            <div id="result" class="result"></div>
+        </div>
+
+        <div class="criteria-card">
+            <h3>เกณฑ์มาตรฐาน BMI</h3>
+            <ul>
+                <li><strong>น้อยกว่า 18.5:</strong>ผอม / น้ำหนักน้อยกว่าเกณฑ์</li>
+                <li><strong>18.5 - 22.9:</strong>ปกติ / สมส่วน</li>
+                <li><strong>23.0 - 24.9:</strong>ท้วม / น้ำหนักเกิน</li>
+                <li><strong>25.0 - 29.9:</strong>อ้วนระดับ 1 (อ้วนระยะเริ้มต้น)</li>
+                <li><strong>30.0 ขึ้นไป:</strong>อ้วนระดับ 2 (อ้วนมาก)</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 โครงการฝึกหัดเขียนโปรแกรมเบื้องต้น สำหรับนักศึกษาปี 1</p>
+    </footer>
+
+    <script src="BMI.js"></script>
+</body>
+</html>
